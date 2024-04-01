@@ -1,0 +1,275 @@
+.open-sans-test {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    background: rgb(243 227 227);
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 2em; 
+    font-size: 3rem;
+    text-shadow: 4px 3px 2px rgb(241, 167, 167);;
+}
+
+header {
+    display: flex;
+    font-weight: bold;
+    font-family: arial;
+    text-align: left;
+    padding: 1.2em;
+    position: relative;
+    top: 0px;
+    background-color: transparent;
+    text-shadow: 4px 3px 2px rgb(241, 167, 167);;
+}
+
+.logo {
+    text-decoration: none;
+    color: black;
+    border: solid rgb(227, 147, 163) 5px;
+    padding: 0.8em;
+    background-color: white;
+}
+
+#projectList,
+#introduction,
+.list {
+    background-color: white;
+    padding-bottom: 12em;
+    text-align: center;
+    overflow-wrap: break-word;
+    border: solid rgb(227, 147, 163) 5px;
+}
+
+.icon,
+.projects,
+.links {
+    border-radius: 100%;
+    width: 15em;
+    height: 15em;
+    padding: 1em;
+    background-color: white;
+    float: left;
+    border: solid rgb(227, 147, 163) 5px;
+    position: relative;
+    transition: 0.8s;
+}
+
+footer {
+    position: fixed;
+    bottom: 1em;
+    left: 10em;
+    background: rgb(243 227 227);
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+  
+.iconCap,
+.proCap,
+.linkCap {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 18em;
+    font-weight: bold;
+}
+
+.icon:hover,
+.projects:hover,
+.links:hover {
+    filter: drop-shadow(0 0 1rem rgb(225, 164, 176));
+    padding: 0;
+    cursor: pointer;
+}
+
+.logo:hover {
+    filter: brightness(90%);
+    transition: 0.8s;
+}
+
+.icon:active,
+.logo:active,
+.projects:active,
+.links:active {
+    filter: brightness(90%);
+}
+
+#introduction,
+#projectList,
+#linkList {
+    position: absolute;
+    border-radius: 10px;
+    padding: 1em;
+    top: 17em;
+    right: 10em;
+    max-width: 50%;
+    animation: fadein 1s;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+    flex-direction: row;
+    padding-top: 1em;
+    gap: 1em;
+}
+
+.container img {
+    height: 80%;
+    width: 100%;
+    object-fit: contain;
+    padding: 1em;
+}
+
+.proTitle,
+.block1,
+.block2,
+.block3,
+.external,
+li img {
+    background-color: white;
+}
+
+.container img:hover {
+    filter: brightness(90%);
+}
+
+.container img:active {
+    filter: brightness(50%);
+}
+
+.textLink {
+    color: black;
+}
+
+.sec1,
+.sec2,
+.sec3 {
+    border: solid rgb(227, 147, 163) 5px;
+    grid-row: span 2;
+    display: inline;
+    width: fit-content;
+}
+
+.proTitle {
+    font-weight: bold;
+}
+
+.git {
+    background: url("images/external-link.png") no-repeat 100% 0;
+    background-size: 16px 16px;
+    padding-right: 19px;
+    background-color: white;
+}
+
+.list li {
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: rgb(228, 227, 227);
+    border: solid rgb(227, 147, 163) 5px;
+    background: radial-gradient(white, rgb(228, 227, 227, 0.3));
+}
+
+.list li:hover {
+    filter: brightness(90%);
+    transition: 0.3s;
+}
+
+.list li:first-child {
+    background: url("images/linkedin.png") no-repeat 3% 2px;
+    background-size: 2.5em 2.5em;
+    background-color: white;
+    cursor: pointer;
+}
+
+.list li:nth-child(2) {
+    background: url("images/git.png") no-repeat 4% 5px;
+    background-size: 1.9em 1.9em;
+    background-color: white;
+    cursor: pointer;
+}
+
+.list li:nth-child(3) {
+    background: url("images/links.png") no-repeat 4% 5px;
+    background-size: 1.9em 1.9em;
+    background-color: white;
+    cursor: pointer;
+}
+
+.list li:last-child {
+    background: url("images/email.png") no-repeat 4% 8px;
+    background-size: 2em 1.4em;
+    background-color: white;
+    cursor: pointer;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media screen and (max-width: 40em){
+    section,
+    footer,
+    figcaption {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 46.25em) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+    }
+}
+
+@media screen and (max-width: 34em) {
+    h1 {
+        padding-left: auto;
+    }
+}
+
+@media screen and (max-width: 34em) {
+    .iconCap,
+    .proCap,
+    .linkCap {
+        width: 15em;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .sec1,
+    .sec2,
+    .sec3 {
+        border: none;
+    }
+
+    .block1,
+    .block2,
+    .block3 {
+        display: none;
+    }
+}
