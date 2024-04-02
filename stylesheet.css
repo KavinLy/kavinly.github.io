@@ -70,7 +70,7 @@ footer {
     position: fixed;
     bottom: 1em;
     left: 10em;
-    background: rgb(243 227 227);
+    background: transparent;
 }
 
 section {
